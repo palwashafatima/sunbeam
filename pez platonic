@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>POUR & TELL ☕</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #f8f4ec;
+            color: #292b27;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #dce7d6;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .logo {
+            font-size: 18px;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 65px;
+            margin: 20px 0 10px;
+        }
+
+        header p {
+            color: #687064;
+            font-size: 18px;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+        }
+
+        .subtitle {
+            color: #777;
+        }
+
+        /* FILTERS */
+
+        .filters {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .filter {
+            border: none;
+            background: white;
+            padding: 12px 18px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .filter:hover {
+            background: #dce7d6;
+        }
+
+        /* CAFES */
+
+        .cafes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cafe {
+            background: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 4px 7px 20px #00000012;
+        }
+
+        .cafe:hover {
+            transform: translateY(-5px);
+        }
+
+        .emoji {
+            font-size: 45px;
+        }
+
+        .cafe h3 {
+            font-family: Georgia, serif;
+            font-size: 27px;
+        }
+
+        .rating {
+            color: #718565;
+            font-weight: bold;
+        }
+
+        .price {
+            color: #777;
+        }
+
+        /* VOTING */
+
+        .poll {
+            background: #fffdf9;
+            padding: 35px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 4px 7px 20px #00000010;
+            margin-top: 30px;
+        }
+
+        .poll button {
+            border: none;
+            background: #ead9d5;
+            padding: 15px 20px;
+            border-radius: 25px;
+            margin: 7px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .poll button:hover {
+            background: #dce7d6;
+        }
+
+        .result {
+            margin: 12px auto;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .bar {
+            background: #dce7d6;
+            height: 25px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .fill {
+            background: #718565;
+            height: 100%;
+            width: 0%;
+            transition: 0.5s;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #30362f;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        @media(max-width:600px) {
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .cafe {
+                width: 75%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        POUR & TELL ☕
+    </div>
+
+    <h1>
+        Where should<br>
+        we go?
+    </h1>
+
+    <p>
+        Karachi's tiny community-powered café guide ✿
+    </p>
+
+</header>
+
+
+
+<!-- FIND A CAFE -->
+
+<section>
+
+    <h2>
+        Find your café
+    </h2>
+
+    <p class="subtitle">
+        What are you looking for today?
+    </p>
+
+
+    <div class="filters">
+
+        <button class="filter" onclick="showAll()">
+            ✨ All
+        </button>
+
+        <button class="filter" onclick="showStudy()">
+            📚 Study
+        </button>
+
+        <button class="filter" onclick="showHangout()">
+            👯 Hangout
+        </button>
+
+        <button class="filter" onclick="showMatcha()">
+            🍵 Matcha
+        </button>
+
+        <button class="filter" onclick="showCheap()">
+            💸 Under Rs. 800
+        </button>
+
+    </div>
+
+
+    <div class="cafes">
+
+
+        <!-- MELBREW -->
+
+        <div class="cafe">
+
+            <div class="emoji">
+                🫘
+            </div>
+
+            <h3>
+                Melbrew
+            </h3>
+
+            <p class="rating">
+                ★ 4.6 / 5
+            </p>
+
+            <p class="price">
+                💸 Rs. 470+
+            </p>
+
+            <p>
+                📚 Study ★★★★☆<br>
+                👯 Hangout ★★★★★<br>
+                🍵 Matcha ★★★☆☆
+            </p>
+
+        </div>
+
+
+
+        <!-- LUNA -->
+
+        <div class="cafe">
+
+            <div class="emoji">
+                🌙
+            </div>
+
+            <h3>
+                Luna
+            </h3>
+
+            <p class="rating">
+                ★ 4.4 / 5
+            </p>
+
+            <p class="price">
+                💸 Rs. 675+
+            </p>
+
+            <p>
+                📚 Study ★★★★☆<br>
+                👯 Hangout ★★★★★<br>
+                🍵 Matcha ★★★★☆
+            </p>
+
+        </div>
+
+
+
+        <!-- DROP -->
+
+        <div class="cafe">
+
+            <div class="emoji">
+                💧
+            </div>
+
+            <h3>
+                Drop
+            </h3>
+
+            <p class="rating">
+                ★ 4.5 / 5
+            </p>
+
+            <p class="price">
+                💸 Rs. 545+
+            </p>
+
+            <p>
+                📚 Study ★★★☆☆<br>
+                👯 Hangout ★★★★★<br>
+                🍵 Matcha ★★★★☆
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- COMMUNITY POLL -->
+
+<section>
+
+    <h2>
+        Karachi has spoken. 🗳️
+    </h2>
+
+    <p class="subtitle">
+        Vote and see what everyone else thinks.
+    </p>
+
+
+    <div class="poll">
+
+        <h3>
+            What's more important in a café?
+        </h3>
+
+
+        <button onclick="vote('coffee')">
+            ☕ Good coffee
+        </button>
+
+        <button onclick="vote('wifi')">
+            📶 Wi-Fi
+        </button>
+
+        <button onclick="vote('price')">
+            💸 Low prices
+        </button>
+
+        <button onclick="vote('vibe')">
+            ✨ The vibe
+        </button>
+
+
+        <div id="results">
+
+            <div class="result">
+                ☕ Good coffee
+                <div class="bar">
+                    <div class="fill" id="coffeeBar"></div>
+                </div>
+                <span id="coffeeText">0%</span>
+            </div>
+
+
+            <div class="result">
+                📶 Wi-Fi
+                <div class="bar">
+                    <div class="fill" id="wifiBar"></div>
+                </div>
+                <span id="wifiText">0%</span>
+            </div>
+
+
+            <div class="result">
+                💸 Low prices
+                <div class="bar">
+                    <div class="fill" id="priceBar"></div>
+                </div>
+                <span id="priceText">0%</span>
+            </div>
+
+
+            <div class="result">
+                ✨ The vibe
+                <div class="bar">
+                    <div class="fill" id="vibeBar"></div>
+                </div>
+                <span id="vibeText">0%</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SECOND POLL -->
+
+<section>
+
+    <div class="poll">
+
+        <h2>
+            The big debate 🌿
+        </h2>
+
+        <p>
+            Be honest...
+        </p>
+
+        <h3>
+            Does matcha taste like grass?
+        </h3>
+
+        <button onclick="matchaVote('yes')">
+            🌱 YES
+        </button>
+
+        <button onclick="matchaVote('no')">
+            🍵 NO
+        </button>
+
+        <p id="matchaResult">
+            Nobody has voted yet 👀
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        POUR & TELL ☕🍵
+    </h3>
+
+    <p>
+        Find it. Rate it. Vote on it.
+    </p>
+
+    <p>
+        Made for Karachi ✿
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* FIRST POLL */
+
+let votes = {
+
+    coffee: 30,
+    wifi: 25,
+    price: 20,
+    vibe: 25
+
+};
+
+
+function vote(choice) {
+
+    votes[choice]++;
+
+    let total =
+        votes.coffee +
+        votes.wifi +
+        votes.price +
+        votes.vibe;
+
+
+    let coffeePercent =
+        Math.round(votes.coffee / total * 100);
+
+    let wifiPercent =
+        Math.round(votes.wifi / total * 100);
+
+    let pricePercent =
+        Math.round(votes.price / total * 100);
+
+    let vibePercent =
+        Math.round(votes.vibe / total * 100);
+
+
+    document.getElementById("coffeeBar").style.width =
+        coffeePercent + "%";
+
+    document.getElementById("wifiBar").style.width =
+        wifiPercent + "%";
+
+    document.getElementById("priceBar").style.width =
+        pricePercent + "%";
+
+    document.getElementById("vibeBar").style.width =
+        vibePercent + "%";
+
+
+    document.getElementById("coffeeText").innerHTML =
+        coffeePercent + "%";
+
+    document.getElementById("wifiText").innerHTML =
+        wifiPercent + "%";
+
+    document.getElementById("priceText").innerHTML =
+        pricePercent + "%";
+
+    document.getElementById("vibeText").innerHTML =
+        vibePercent + "%";
+
+}
+
+
+
+/* MATCHA POLL */
+
+let yes = 50;
+let no = 50;
+
+
+function matchaVote(answer) {
+
+    if (answer == "yes") {
+
+        yes++;
+
+    } else {
+
+        no++;
+
+    }
+
+
+    let total = yes + no;
+
+    let yesPercent =
+        Math.round(yes / total * 100);
+
+    let noPercent =
+        Math.round(no / total * 100);
+
+
+    document.getElementById("matchaResult").innerHTML =
+        "🌱 YES " + yesPercent +
+        "% &nbsp;&nbsp; 🍵 NO " +
+        noPercent + "%";
+
+}
+
+
+
+/* FILTER BUTTONS */
+
+function showAll() {
+
+    alert("Showing all cafés ✨");
+
+}
+
+
+function showStudy() {
+
+    alert("Best for studying: Melbrew + Luna 📚");
+
+}
+
+
+function showHangout() {
+
+    alert("Best for hanging out: Melbrew + Luna + Drop 👯");
+
+}
+
+
+function showMatcha() {
+
+    alert("Best matcha options: Luna + Drop 🍵");
+
+}
+
+
+function showCheap() {
+
+    alert("Budget-friendly picks: Melbrew + Drop 💸");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
